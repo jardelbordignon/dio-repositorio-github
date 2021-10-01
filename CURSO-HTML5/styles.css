@@ -1,5 +1,6 @@
 body {
   background-color: #f7f7f7;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .avatar {
@@ -12,11 +13,22 @@ body {
   color: #505050;
 }
 
+#title {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: line-through;
+  color: #505050;
+}
+
 .post_title {
   font-size: 16px;
   font-size: italic;
   margin: 0;
   margin-bottom: 15px;
+  text-transform: capitalize;
 }
 
 .post {
