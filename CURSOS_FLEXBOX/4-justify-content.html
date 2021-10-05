@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos - justify-content</title>
+  
+  <style>
+    html {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .flex-wrapper {
+      max-width: 400px;
+      border: 1px solid black;
+      margin: 0;
+      gap: 10px;
+      display: flex;
+    }
+    .column {
+      flex-direction: column;
+      min-height: 200px;
+    }
+
+    .flex-item {
+      background-color: blueviolet;
+      color: white;
+      text-align: center;
+      min-width: 30px;
+      min-height: 30px;
+    }
+    .flex-start {
+      justify-content: flex-start;
+    }
+    .flex-end {
+      justify-content: flex-end;
+    }
+    .center {
+      justify-content: center;
+    }
+    .space-between {
+      justify-content: space-between;
+    }
+    .space-around {
+      justify-content: space-around;
+    }
+  </style>
+</head>
+<body>
+  <h1>row</h1>
+
+  <h2>justify-content: flex-start</h2>
+  <section class="flex-wrapper flex-start">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+  
+  <h2>justify-content: flex-end</h2>
+  <section class="flex-wrapper flex-end">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+  
+  <h2>justify-content: center</h2>
+  <section class="flex-wrapper center">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+  
+  <h2>justify-content: space-between</h2>
+  <section class="flex-wrapper space-between">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+  
+  <h2>justify-content: space-around</h2>
+  <section class="flex-wrapper space-around">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+
+  <h1>column</h1>
+  <h2>justify-content: flex-start column</h2>
+  <section class="flex-wrapper flex-start column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+  
+  <h2>justify-content: space-end column</h2>
+  <section class="flex-wrapper flex-end column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+  
+  <h2>justify-content: center column</h2>
+  <section class="flex-wrapper center column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+  
+  <h2>justify-content: space-between column</h2>
+  <section class="flex-wrapper space-between column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+  
+  <h2>justify-content: space-around column</h2>
+  <section class="flex-wrapper space-around column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+</body>
+</html>
