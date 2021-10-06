@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos - flex-shrink</title>
+  <style>
+    html { font-family: Helvetica, Arial, sans-serif; }
+    h2 { margin-top: 40px; }
+
+    .flex-wrapper {
+      display: flex;
+      border: 1px solid black;
+      max-width: 350px;
+      gap: 10px;
+    }
+
+    .flex-item {
+      background-color: orangered;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .shrink-0 { flex-shrink: 0; }
+    .shrink-1 { flex-shrink: 1; }
+    .shrink-2 { flex-shrink: 2; }
+
+    .fator-de-crescimento-1 { flex-grow: 1; }
+    .fator-de-crescimento-2 { flex-grow: 2; }
+
+    .basics-100px { flex-basis: 100px; }
+  </style>
+</head>
+<body>
+  <p>
+    flex-shrink é a propriedade que estabelece a capacidade de redução ou compressão do tamanho de um item.
+  </p>
+
+  <h2>flex-shrink: 1 (default)</h2>
+  <div class="flex-wrapper">
+    <div class="flex-item shrink-1 fator-de-crescimento-1">A</div>
+    <div class="flex-item shrink-1 fator-de-crescimento-1">B</div>
+    <div class="flex-item shrink-1 fator-de-crescimento-1">C</div>
+    <div class="flex-item shrink-1 fator-de-crescimento-1">D</div>
+    <div class="flex-item shrink-1 fator-de-crescimento-1">E</div>
+  </div>
+  <div class="flex-wrapper">
+    <div class="flex-item shrink-1 fator-de-crescimento-1">A</div>
+    <div class="flex-item shrink-1 fator-de-crescimento-1">Item com conteúdo maior</div>
+    <div class="flex-item shrink-1 fator-de-crescimento-1">C</div>
+    <div class="flex-item shrink-1 fator-de-crescimento-1">D</div>
+  </div>
+
+  <h2>flex-shrink: 0 - não permite redução</h2>
+  <div class="flex-wrapper">
+    <div class="flex-item shrink-0 fator-de-crescimento-1">A</div>
+    <div class="flex-item shrink-0 fator-de-crescimento-1">Item com conteúdo maior</div>
+    <div class="flex-item shrink-0 fator-de-crescimento-1">C</div>
+    <div class="flex-item shrink-0 fator-de-crescimento-1">D</div>
+  </div>
+  
+  <h2>flex-shrink: 0 e flex-basics: 100px</h2>
+  <span>flex-shrink não é respeitado, prevalece o flex-basics</span>
+  <div class="flex-wrapper">
+    <div class="flex-item shrink-0 basics-100px fator-de-crescimento-1">A</div>
+    <div class="flex-item shrink-0 basics-100px fator-de-crescimento-1">Item com conteúdo maior</div>
+    <div class="flex-item shrink-0 basics-100px fator-de-crescimento-1">C</div>
+    <div class="flex-item shrink-0 basics-100px fator-de-crescimento-1">D</div>
+  </div>
+  
+  <h2>flex-shrink: 1 e flex-basics: 100px</h2>
+  <span>flex-shrink prevalece o flex-basics</span>
+  <div class="flex-wrapper">
+    <div class="flex-item shrink-1 basics-100px fator-de-crescimento-1">A</div>
+    <div class="flex-item shrink-1 basics-100px fator-de-crescimento-1">Item com conteúdo maior</div>
+    <div class="flex-item shrink-1 basics-100px fator-de-crescimento-1">C</div>
+    <div class="flex-item shrink-1 basics-100px fator-de-crescimento-1">D</div>
+  </div>
+</body>
+</html>
