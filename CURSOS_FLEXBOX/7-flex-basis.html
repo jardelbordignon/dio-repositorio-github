@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos - flex-basis</title>
+
+  <style>
+    .flex-wrapper {
+      display: flex;
+      max-width: 500px;
+      border: 1px solid black;
+      gap: 10px;
+    }
+    .flex-item {
+      background-color: coral;
+      color: white;
+      text-align: center;
+    }
+
+    .basics-auto { flex-basis: auto; }
+    .basics-0 { flex-basis: 0; }
+    .basics-100px { flex-basis: 100px; }
+
+    .fator-de-crescimento-1 { flex-grow: 1; }
+    .fator-de-crescimento-2 { flex-grow: 2; }
+  </style>
+</head>
+<body>
+
+  <p>É a propriedade que estabelece o tamanho inicial do item antes da distribuição de espaço restante dentro dele, usando como base o conteúdo iterno disposto.</p>
+  <ul>
+    <li>auto: caso o item não tenha tamanho, este será proporcional ao conteúdo do item.</li>
+    <li>px, % em, ...: são valores exatos previamente deifidos</li>
+    <li>0 (zero): terá relação como a definição de flex-grow</li>
+  </ul>
+
+  <h2>flex-basis: auto</h2>
+  <div class="flex-wrapper">
+    <div class="flex-item basics-auto fator-de-crescimento-1">A</div>
+    <div class="flex-item basics-auto fator-de-crescimento-1">BBB</div>
+    <div class="flex-item basics-auto fator-de-crescimento-1">C</div>
+    <div class="flex-item basics-auto fator-de-crescimento-2">DEF</div>
+  </div>
+
+  <h2>flex-basis: 0 (zero)</h2>
+  <div class="flex-wrapper">
+    <div class="flex-item basics-0 fator-de-crescimento-1">A</div>
+    <div class="flex-item basics-0 fator-de-crescimento-1">BBB</div>
+    <div class="flex-item basics-0 fator-de-crescimento-1">C</div>
+    <div class="flex-item basics-0 fator-de-crescimento-2">DEF</div>
+  </div>
+
+  <h2>flex-basis + width com fator de crescimento zero</h2>
+  <div class="flex-wrapper">
+    <div class="flex-item basics-100px fator-de-crescimento-0">A</div>
+    <div class="flex-item basics-100px fator-de-crescimento-0">BBB</div>
+    <div class="flex-item basics-100px fator-de-crescimento-0">C</div>
+    <div class="flex-item basics-100px fator-de-crescimento-0">DEF</div>
+  </div>
+  
+  <h2>flex-basis + width com fator de crescimento dois distribuindo o espaço restante</h2>
+  <div class="flex-wrapper">
+    <div class="flex-item basics-100px fator-de-crescimento-2">A</div>
+    <div class="flex-item basics-100px fator-de-crescimento-2">BBB</div>
+    <div class="flex-item basics-100px fator-de-crescimento-2">C</div>
+    <div class="flex-item basics-100px fator-de-crescimento-2">DEF</div>
+  </div>
+</body>
+</html>
