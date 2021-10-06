@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos - align-self</title>
+
+  <style>
+    html { font-family: Helvetica, Arial, sans-serif; }
+    h2 { margin-top: 40px; }
+
+    .flex-wrapper {
+      display: flex;
+      border: 1px solid black;
+      max-width: 350px;
+      min-height: 100px;
+      gap: 10px;
+    }
+
+    .flex-item {
+      background-color: blueviolet;
+      color: white;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .auto { align-self: auto; }
+    .center { align-self: center; }
+    .flex-start { align-self: flex-start; }
+    .flex-end { align-self: flex-end; }
+    .baseline { align-self: baseline; }
+    .stretch { align-self: stretch; }
+  </style>
+</head>
+<body>
+  <p>
+    A propriedade align-self estabelece o alinhamento de modo individual sobre um determinado item,
+    diferente do align-items que alinha todos os elementos do container (align-items prevalece se for definido)
+  </p>
+
+  <h2>order: 0 (default)</h2>
+  <div class="flex-wrapper">
+    <div class="flex-item auto">AAA</div>
+    <div class="flex-item auto">BBBB</div>
+    <div class="flex-item auto">CCC CCC CCC CCC CCC</div>
+    <div class="flex-item auto">DDDD</div>
+  </div>
+  
+  <div class="flex-wrapper">
+    <div class="flex-item center">center center</div>
+    <div class="flex-item flex-start">flex-start flex-start</div>
+    <div class="flex-item flex-end">flex-end flex-end</div>
+    <div class="flex-item stretch">stretch stretch</div>
+  </div>
+
+</body>
+</html>
